@@ -2,23 +2,11 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node",
-      "config": {
-        "buildCommand": "npm run build",
-        "outputDirectory": "dist/public"
-      }
+      "src": "dist/index.cjs",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/dist/public/assets/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|svg|woff2?))",
-      "dest": "/dist/public/$1"
-    },
     {
       "src": "/(.*)",
       "dest": "/dist/index.cjs"
