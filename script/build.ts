@@ -1,6 +1,7 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile } from "fs/promises";
+import { rm, readFile, mkdir, copyFile, readdir } from "fs/promises";
+import path from "path";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -59,6 +60,18 @@ async function buildAll() {
     external: externals,
     logLevel: "info",
   });
+
+  console.log("copying content/posts to dist...");
+  const srcDir = path.resolve("content/posts");
+  const destDir = path.resolve("dist/content/posts");
+  await mkdir(destDir, { recursive: true });
+  const files = await readdir(srcDir);
+  await Promise.all(
+    files
+      .filter((f) => f.endsWith(".md"))
+      .map((f) => copyFile(path.join(srcDir, f), path.join(destDir, f)))
+  );
+  console.log(`copied ${files.length} post(s) to dist/content/posts`);
 }
 
 buildAll().catch((err) => {
