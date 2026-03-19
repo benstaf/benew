@@ -57,7 +57,7 @@ The key insight:
 
 > **Attention is not noise—it’s an early signal of market pull.**
 
-This is supported by academic research showing that [**web mentions correlate with startup success outcomes**](https://doi.org/10.1145/3269206.3272011).
+This is supported by academic research showing that [web mentions correlate with startup success outcomes](https://doi.org/10.1145/3269206.3272011).
 
 So we compute:
 
@@ -93,6 +93,8 @@ In other words:
 
 > YC batches are not uniform—they are *winner-take-most systems*.
 
+![](https://ycbench.com/ycw26_powerlaw.jpg)
+
 ---
 
 ## Why Focus on the Top 10%?
@@ -111,7 +113,7 @@ This aligns with the philosophy described by [diversified YC funds like Rebel Fu
 
 ## The Ranking: Where Attention Meets Traction
 
-The final ranking (see chart) is driven by the **hybrid Pre-Demo Day Score**.
+The final ranking is driven by the **hybrid Pre-Demo Day Score**.
 
 What makes this ranking useful:
 
@@ -122,6 +124,9 @@ What makes this ranking useful:
 Most importantly:
 
 > It shows *not just who is good*, but **who the market already believes might be great**.
+
+
+![](https://ycbench.com/ycw26_ranking.jpg)
 
 ---
 
