@@ -6,8 +6,6 @@ date: "2026-03-19"
 author: "YC Bench Team"
 ---
 
-As YC W26 approaches Demo Day, the biggest challenge for investors isn’t access—it’s prioritization.
-
 Hundreds of startups, limited time, and asymmetric information make it hard to know where to focus. While some firms like [Lobster Capital](https://www.lobstercap.com/) concentrate on identifying the absolute outliers (top ~2%), many funds—especially diversified YCombinator strategies like [Rebel Fund](https://www.rebelfund.vc/)—optimize for a broader top 10% to balance upside with portfolio risk.
 
 This post introduces our **Pre-Demo Day Score**, a data-driven ranking designed specifically for that purpose.
