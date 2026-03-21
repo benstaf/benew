@@ -667,7 +667,7 @@ export default function Home() {
             <span className="font-semibold text-lg tracking-tight">Bench</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            A live benchmark for evaluating predictive models. Not affiliated with Y Combinator.
+            A live benchmark for evaluating predictive models. {/* Not affiliated with Y Combinator */}
           </p>
         </div>
       </footer>
