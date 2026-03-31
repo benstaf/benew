@@ -195,53 +195,80 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 3. Live Leaderboard Preview */}
-        <section id="leaderboard" className="py-24 bg-secondary/30">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Live Benchmark Leaderboard</h2>
-              <p className="text-muted-foreground">Leaderboard updates every evaluation cycle (90 days)</p>
-            </div>
 
-            <Card className="border border-border/50 shadow-md overflow-hidden bg-white">
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="bg-secondary/50">
-                      <TableHead className="font-semibold text-foreground py-4">Model</TableHead>
-                      <TableHead className="font-semibold text-foreground text-right py-4">Top-Decile Precision</TableHead>
-                      <TableHead className="font-semibold text-foreground text-right py-4">Rank Correlation</TableHead>
-                      <TableHead className="font-semibold text-foreground text-right py-4">Reward Capture</TableHead>
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    <TableRow className="bg-primary/5 hover:bg-primary/10 transition-colors group">
-                      <TableCell className="font-semibold text-primary py-4 flex items-center gap-2">
-                        <Rocket className="w-4 h-4" />
-                        VelocityNet v1
-                      </TableCell>
-                      <TableCell className="text-right font-mono py-4">0.62</TableCell>
-                      <TableCell className="text-right font-mono py-4">0.41</TableCell>
-                      <TableCell className="text-right font-mono text-emerald-600 font-medium py-4">+0.85σ</TableCell>
-                    </TableRow>
-                    <TableRow className="hover:bg-muted/50 transition-colors">
-                      <TableCell className="font-medium py-4">BatchRanker</TableCell>
-                      <TableCell className="text-right font-mono py-4">0.58</TableCell>
-                      <TableCell className="text-right font-mono py-4">0.36</TableCell>
-                      <TableCell className="text-right font-mono text-emerald-600 font-medium py-4">+0.71σ</TableCell>
-                    </TableRow>
-                    <TableRow className="hover:bg-muted/50 transition-colors">
-                      <TableCell className="text-muted-foreground py-4">YCbench Baseline</TableCell>
-                      <TableCell className="text-right font-mono text-muted-foreground py-4">0.50</TableCell>
-                      <TableCell className="text-right font-mono text-muted-foreground py-4">0.29</TableCell>
-                      <TableCell className="text-right font-mono text-muted-foreground font-medium py-4">+0.55σ</TableCell>
-                    </TableRow>
-                  </TableBody>
-                </Table>
-              </div>
-            </Card>
-          </div>
-        </section>
+{/* 3. Live Leaderboard Preview */}
+<section id="leaderboard" className="py-24 bg-secondary/30">
+  <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        Live Benchmark Leaderboard
+      </h2>
+      <p className="text-muted-foreground">
+        Can you beat the baseline?
+      </p>
+    </div>
+
+    <Card className="border border-border/50 shadow-md overflow-hidden bg-white">
+      <div className="overflow-x-auto">
+        <Table>
+          <TableHeader>
+            <TableRow className="bg-secondary/50">
+              <TableHead className="font-semibold text-foreground py-4">
+                Model
+              </TableHead>
+              <TableHead className="font-semibold text-foreground text-right py-4">
+                Precision
+              </TableHead>
+              <TableHead className="font-semibold text-foreground text-right py-4">
+                Recall
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+
+          <TableBody>
+            {/* Your model CTA */}
+            <TableRow className="bg-primary/5 hover:bg-primary/10 transition-colors group">
+              <TableCell className="font-semibold text-primary py-4 flex items-center gap-2">
+                <Rocket className="w-4 h-4" />
+                Your model?
+              </TableCell>
+              <TableCell className="text-right font-mono py-4">?</TableCell>
+              <TableCell className="text-right font-mono py-4">?</TableCell>
+            </TableRow>
+
+            {/* YC Bench baseline */}
+            <TableRow className="hover:bg-muted/50 transition-colors">
+              <TableCell className="font-medium py-4">
+                YC Bench Baseline (Google Mentions)
+              </TableCell>
+              <TableCell className="text-right font-mono py-4">
+                30%
+              </TableCell>
+              <TableCell className="text-right font-mono py-4">
+                55%
+              </TableCell>
+            </TableRow>
+
+            {/* Random predictor */}
+            <TableRow className="hover:bg-muted/50 transition-colors">
+              <TableCell className="text-muted-foreground py-4">
+                Random Predictor
+              </TableCell>
+              <TableCell className="text-right font-mono text-muted-foreground py-4">
+                10.9%
+              </TableCell>
+              <TableCell className="text-right font-mono text-muted-foreground py-4">
+                —
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </div>
+    </Card>
+  </div>
+</section>
+
+
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
           {/* 4. Batch Outperformer Radar */}
