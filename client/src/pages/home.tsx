@@ -254,7 +254,7 @@ export default function Home() {
                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
                   <h3 className="font-semibold text-lg flex items-center gap-2">
                     <Target className="w-5 h-5 text-primary" />
-                    Top Predicted Outperformers
+                    Top Outperformers
                   </h3>
                   <span className="text-sm font-medium bg-secondary px-2 py-1 rounded">W26 Batch</span>
                 </div>
@@ -337,25 +337,42 @@ export default function Home() {
           </div>
         </section>
 
+        
         {/* 7. Evaluation Metrics */}
-        <section className="py-24 bg-foreground text-background">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">Evaluation Metrics</h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                { name: "Top-Decile Precision", desc: "How often predicted leaders actually outperform their cohort." },
-                { name: "Rank Correlation", desc: "Alignment between predicted and actual ranking across the batch." },
-                { name: "Reward Capture", desc: "Average velocity achieved by top predictions relative to the batch median." },
-              ].map((metric, i) => (
-                <div key={i} className="p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
-                  <h3 className="text-lg font-semibold text-white mb-2">{metric.name}</h3>
-                  <p className="text-zinc-400 text-sm">{metric.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+<section className="py-24 bg-foreground text-background">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-white">
+      Evaluation Metrics
+    </h2>
+    
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {[
+        { 
+          name: "Precision", 
+          desc: "How often predicted top startups actually rank among the batch’s top performers." 
+        },
+        { 
+          name: "Recall", 
+          desc: "How many of the true top-performing startups are captured within the predictions." 
+        },
+      ].map((metric, i) => (
+        <div
+          key={i}
+          className="p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+        >
+          <h3 className="text-lg font-semibold text-white mb-2">
+            {metric.name}
+          </h3>
+          <p className="text-zinc-400 text-sm">
+            {metric.desc}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+        
+        
 
         {/* 8. Why YC Data & 9. Protocol */}
         <section id="protocol" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
