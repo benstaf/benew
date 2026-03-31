@@ -196,6 +196,8 @@ export default function Home() {
         </section>
 
 
+
+
 {/* 3. Live Leaderboard Preview */}
 <section id="leaderboard" className="py-24 bg-secondary/30">
   <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -213,63 +215,55 @@ export default function Home() {
         <Table>
           <TableHeader>
             <TableRow className="bg-secondary/50">
-              <TableHead className="font-semibold text-foreground py-5 w-1/2">
+              <TableHead className="font-semibold text-foreground py-6 w-1/2">
                 Model
               </TableHead>
-
-              <TableHead className="text-right py-5 w-1/4">
-                <div className="font-semibold text-foreground">Precision</div>
-                <div className="text-xs text-muted-foreground font-normal">
-                  Top 10%
-                </div>
+              <TableHead className="font-semibold text-foreground text-center py-6 w-1/4">
+                Precision
               </TableHead>
-
-              <TableHead className="text-right py-5 w-1/4">
-                <div className="font-semibold text-foreground">Recall</div>
-                <div className="text-xs text-muted-foreground font-normal">
-                  High-traction startups
-                </div>
+              <TableHead className="font-semibold text-foreground text-center py-6 w-1/4">
+                Recall
               </TableHead>
             </TableRow>
           </TableHeader>
 
           <TableBody>
-            {/* Your model (CTA) */}
-            <TableRow className="bg-primary/10 border-y border-primary/20 hover:bg-primary/15 transition-colors">
-              <TableCell className="font-semibold text-primary py-5 flex items-center gap-2">
+            {/* CTA */}
+            <TableRow className="bg-primary/10 border-y border-primary/20">
+              <TableCell className="font-semibold text-primary py-6 flex items-center gap-2">
                 <Rocket className="w-4 h-4" />
                 Your model?
               </TableCell>
-              <TableCell className="text-right font-mono font-semibold py-5">
+              <TableCell className="text-center font-mono font-semibold py-6">
                 ?
               </TableCell>
-              <TableCell className="text-right font-mono font-semibold py-5">
+              <TableCell className="text-center font-mono font-semibold py-6">
                 ?
               </TableCell>
             </TableRow>
 
             {/* Baseline */}
             <TableRow className="hover:bg-muted/50 transition-colors">
-              <TableCell className="font-medium py-5">
+              <TableCell className="font-medium py-6">
                 YC Bench Baseline (Google Mentions)
               </TableCell>
-              <TableCell className="text-right font-mono font-semibold py-5">
+              <TableCell className="text-center font-mono font-semibold py-6">
                 30%
               </TableCell>
-              <TableCell className="text-right font-mono font-semibold py-5">
+              <TableCell className="text-center font-mono font-semibold py-6">
                 55%
               </TableCell>
             </TableRow>
 
             {/* Random */}
             <TableRow className="hover:bg-muted/50 transition-colors">
-              <TableCell className="text-muted-foreground py-5">
+              <TableCell className="text-muted-foreground py-6">
                 Random Predictor
               </TableCell>
-              <TableCell className="text-right font-mono text-muted-foreground py-5">
+              <TableCell className="text-center font-mono text-muted-foreground py-6">
                 10.9%
               </TableCell>
-              <TableCell className="text-right font-mono text-muted-foreground py-5">
+              <TableCell className="text-center font-mono text-muted-foreground py-6">
                 —
               </TableCell>
             </TableRow>
@@ -279,6 +273,13 @@ export default function Home() {
     </Card>
   </div>
 </section>
+
+
+
+
+
+
+
 
 
 
