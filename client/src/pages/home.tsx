@@ -245,10 +245,10 @@ export default function Home() {
             {/* Baseline */}
             <TableRow className="hover:bg-muted/50 transition-colors">
               <TableCell className="font-medium py-6">
-                YC Bench Baseline (Google Mentions)
+                YC Bench Baseline
               </TableCell>
               <TableCell className="text-center font-mono font-semibold py-6">
-                30%
+                70%
               </TableCell>
               <TableCell className="text-center font-mono font-semibold py-6">
                 55%
@@ -261,10 +261,10 @@ export default function Home() {
                 Random Predictor
               </TableCell>
               <TableCell className="text-center font-mono text-muted-foreground py-6">
-                10.9%
+                10%
               </TableCell>
               <TableCell className="text-center font-mono text-muted-foreground py-6">
-                —
+                 10%
               </TableCell>
             </TableRow>
           </TableBody>
@@ -516,10 +516,27 @@ export default function Home() {
           
           <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
             {[
-              { phase: "Phase 1", title: "Data aggregation", active: true },
-              { phase: "Phase 2", title: "First benchmark release", active: false },
-              { phase: "Phase 3", title: "Live model leaderboard", active: false },
-              { phase: "Phase 4", title: "Open model submissions", active: false },
+            
+  { 
+    phase: "Phase 1", 
+    title: "Baseline Validation", 
+    active: false
+  },
+  { 
+    phase: "Phase 2", 
+    title: "Open Model Submissions", 
+    active: true
+  },
+  { 
+    phase: "Phase 3", 
+    title: "Live Performance Leaderboard", 
+    active: false 
+  },
+  { 
+    phase: "Phase 4", 
+    title: "AI-Automated YC Investment", 
+    active: false 
+  },
             ].map((step, i) => (
               <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
                 <div className={`flex items-center justify-center w-10 h-10 rounded-full border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 ${step.active ? 'bg-primary text-white' : 'bg-secondary text-muted-foreground'}`}>
