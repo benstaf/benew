@@ -260,13 +260,14 @@ export default function Home() {
                 </div>
                 
                 <div className="space-y-4">
-                  {[
-                    { name: "Company A", score: "+1.8σ", color: "text-primary", bg: "bg-primary/10" },
-                    { name: "Company B", score: "+1.5σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Company C", score: "+1.3σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Company D", score: "+1.2σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Company E", score: "+1.1σ", color: "text-foreground", bg: "bg-secondary" },
-                  ].map((company, i) => (
+                	
+                {[
+  { name: "Pocket", score: "+2.0σ", color: "text-primary", bg: "bg-primary/10" },
+  { name: "Mango Medical", score: "+1.2σ", color: "text-foreground", bg: "bg-secondary" },
+  { name: "Didit", score: "+1.0σ", color: "text-foreground", bg: "bg-secondary" },
+  { name: "Corvera", score: "+0.6σ", color: "text-foreground", bg: "bg-secondary" },
+  { name: "Samora AI", score: "+0.5σ", color: "text-foreground", bg: "bg-secondary" },
+].map((company, i) => (
                     <div key={i} className="flex items-center justify-between group">
                       <div className="flex items-center gap-3">
                         <span className={`w-6 text-center font-mono text-sm ${i === 0 ? 'text-primary font-bold' : 'text-muted-foreground'}`}>{i+1}</span>
