@@ -213,51 +213,63 @@ export default function Home() {
         <Table>
           <TableHeader>
             <TableRow className="bg-secondary/50">
-              <TableHead className="font-semibold text-foreground py-4">
+              <TableHead className="font-semibold text-foreground py-5 w-1/2">
                 Model
               </TableHead>
-              <TableHead className="font-semibold text-foreground text-right py-4">
-                Precision
+
+              <TableHead className="text-right py-5 w-1/4">
+                <div className="font-semibold text-foreground">Precision</div>
+                <div className="text-xs text-muted-foreground font-normal">
+                  Top 10%
+                </div>
               </TableHead>
-              <TableHead className="font-semibold text-foreground text-right py-4">
-                Recall
+
+              <TableHead className="text-right py-5 w-1/4">
+                <div className="font-semibold text-foreground">Recall</div>
+                <div className="text-xs text-muted-foreground font-normal">
+                  High-traction startups
+                </div>
               </TableHead>
             </TableRow>
           </TableHeader>
 
           <TableBody>
-            {/* Your model CTA */}
-            <TableRow className="bg-primary/5 hover:bg-primary/10 transition-colors group">
-              <TableCell className="font-semibold text-primary py-4 flex items-center gap-2">
+            {/* Your model (CTA) */}
+            <TableRow className="bg-primary/10 border-y border-primary/20 hover:bg-primary/15 transition-colors">
+              <TableCell className="font-semibold text-primary py-5 flex items-center gap-2">
                 <Rocket className="w-4 h-4" />
                 Your model?
               </TableCell>
-              <TableCell className="text-right font-mono py-4">?</TableCell>
-              <TableCell className="text-right font-mono py-4">?</TableCell>
+              <TableCell className="text-right font-mono font-semibold py-5">
+                ?
+              </TableCell>
+              <TableCell className="text-right font-mono font-semibold py-5">
+                ?
+              </TableCell>
             </TableRow>
 
-            {/* YC Bench baseline */}
+            {/* Baseline */}
             <TableRow className="hover:bg-muted/50 transition-colors">
-              <TableCell className="font-medium py-4">
+              <TableCell className="font-medium py-5">
                 YC Bench Baseline (Google Mentions)
               </TableCell>
-              <TableCell className="text-right font-mono py-4">
+              <TableCell className="text-right font-mono font-semibold py-5">
                 30%
               </TableCell>
-              <TableCell className="text-right font-mono py-4">
+              <TableCell className="text-right font-mono font-semibold py-5">
                 55%
               </TableCell>
             </TableRow>
 
-            {/* Random predictor */}
+            {/* Random */}
             <TableRow className="hover:bg-muted/50 transition-colors">
-              <TableCell className="text-muted-foreground py-4">
+              <TableCell className="text-muted-foreground py-5">
                 Random Predictor
               </TableCell>
-              <TableCell className="text-right font-mono text-muted-foreground py-4">
+              <TableCell className="text-right font-mono text-muted-foreground py-5">
                 10.9%
               </TableCell>
-              <TableCell className="text-right font-mono text-muted-foreground py-4">
+              <TableCell className="text-right font-mono text-muted-foreground py-5">
                 —
               </TableCell>
             </TableRow>
@@ -267,6 +279,14 @@ export default function Home() {
     </Card>
   </div>
 </section>
+
+
+
+
+
+
+
+
 
 
 
