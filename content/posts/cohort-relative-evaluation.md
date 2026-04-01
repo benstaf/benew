@@ -1,7 +1,7 @@
 ---
 title: "Why Cohort-Relative Evaluation Is the Best Way to Score Early-Stage Y Combinator Startups"
 description: "Absolute metrics mislead. Here's why comparing YC startups to their cohort peers unlocks far more predictive signal."
-date: "2025-03-12"
+date: "2026-03-12"
 author: "YC Bench Team"
 ---
 
