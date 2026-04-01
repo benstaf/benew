@@ -4,7 +4,7 @@ title: "Signals, Not Narratives - How We Cut Through the YC Hype Cycle"
 description: "YC Bench turns YC batches into a live benchmark for forecasting startup outperformance."
 date: "2026-03-08"
 author: "YC Bench Team"
------------------------
+---
 
 Every YC batch produces the same pattern.
 
