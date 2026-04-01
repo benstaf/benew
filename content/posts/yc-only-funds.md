@@ -11,7 +11,7 @@ Venture capital is, at its core, a prediction problem:
 
 > **Which startups will outperform?**
 
-For decades, this has been solved through intuition, networks, and subjective judgment.
+For decades, this has been solved through human intuition, networks, and subjective judgment.
 
 But AI is rapidly improving at exactly this kind of task:
 
