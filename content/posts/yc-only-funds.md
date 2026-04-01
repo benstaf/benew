@@ -115,7 +115,7 @@ This is not just data — it’s **structured training data**.
 
 ---
 
-## Fast Iteration: A New Model Every 3–6 Months
+## Fast Iteration: A New Model Every 3 Months
 
 In traditional venture, feedback takes a decade.
 
