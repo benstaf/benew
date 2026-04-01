@@ -1,7 +1,7 @@
 ---
-title: "Why Cohort-Relative Evaluation Is the Only Fair Way to Score Early-Stage Startups"
-description: "Absolute metrics mislead. Here's why comparing startups to their cohort peers unlocks far more predictive signal."
-date: "2025-11-12"
+title: "Why Cohort-Relative Evaluation Is the Best Way to Score Early-Stage Y Combinator Startups"
+description: "Absolute metrics mislead. Here's why comparing YC startups to their cohort peers unlocks far more predictive signal."
+date: "2025-03-12"
 author: "YC Bench Team"
 ---
 
@@ -24,31 +24,16 @@ Cohort-relative scoring adjusts for this. If the median company in Company B's c
 
 ## What "Cohort" Actually Means
 
-We define a cohort as companies that:
-
-1. Participated in the same YC batch (W/S + year)
-2. Operate in broadly comparable go-to-market conditions (same macro window, same capital market)
+We define a cohort as companies that participated in the same YC batch (W/S + year). They operate in broadly comparable go-to-market conditions (same macro window, same capital market)
 
 This makes the comparison fair. You're not comparing a company that raised in 2021 to one that raised in 2023. You're comparing apples to apples.
 
-## The Metric Is Velocity, Not Position
+## The Metric Is Velocity
 
 Even within a cohort, where you *start* matters less than how fast you're moving. A company that enters Demo Day at $5K MRR and reaches $80K six months later has demonstrated something more interesting than a company that started at $40K and reached $50K.
 
-YC Bench tracks **rate of change**, not snapshots. The leaderboard reflects momentum — and momentum is what compounds.
-
-## Why This Predicts Fundraising Outcomes
-
-Our analysis of the W21 and S22 cohorts found a consistent pattern: companies in the top quartile of cohort-relative momentum at day 90 post-Demo Day closed subsequent rounds at:
-
-- **2.1× higher valuations** than median-cohort companies
-- **40% faster** from first outreach to close
-- **3.8× higher probability** of closing at all
-
-This isn't surprising in hindsight. Investors are essentially doing the same mental math — adjusting for cohort context when they evaluate a company. YC Bench just makes that math explicit and continuous.
+YC Bench also tracks **rate of change**. The leaderboard reflects momentum — and momentum is what compounds.
 
 ## The Limits of Relative Scoring
 
 Cohort-relative evaluation isn't perfect. It can penalize companies in small or weak cohorts (even great companies look merely average if the cohort is extraordinary). And it doesn't capture absolute market size — a company crushing their cohort in a niche market may still be less valuable than a slower mover in a massive one.
-
-We treat cohort-relative scores as one signal in a larger picture, not as a final verdict. But as leading indicators go, it's among the most reliable we've found.
