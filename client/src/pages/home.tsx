@@ -320,7 +320,7 @@ export default function Home() {
         <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">A rigorous framework for evaluating predictive signals.</p>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">A forward-looking approach to test predictive models.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
