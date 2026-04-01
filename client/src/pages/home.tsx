@@ -14,6 +14,7 @@ import {
   Search,
   Rocket,
   Mail,
+  GitHub,
   Calendar,
 } from "lucide-react";
 
@@ -110,7 +111,15 @@ export default function Home() {
           <div className="hidden md:flex items-center gap-8">
             <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
             <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
-            <a href="#protocol" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Protocol</a>
+            <a 
+  href="https://github.com/benstaf/ycbench" 
+  target="_blank" 
+  rel="noopener noreferrer" 
+  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
+>
+  <Github className="w-4 h-4" />
+  GitHub
+</a>
             <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
             <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" onClick={() => document.getElementById("join")?.scrollIntoView({ behavior: "smooth" })}>
               Join the Benchmark
