@@ -576,7 +576,7 @@ export default function Home() {
     </h2>
 
     <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-      Enter the benchmark. Submit your predictive model and see how it ranks against others predicting YC startup performance.
+      Enter the benchmark. Submit your predictive model and see how it ranks against others predicting YC startup outperformance.
     </p>
 
     <div className="flex justify-center">
