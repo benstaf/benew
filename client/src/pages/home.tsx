@@ -57,6 +57,9 @@ function formatDate(dateStr: string) {
   });
 }
 
+const FORM_URL = "https://forms.gle/oYh3teZ8xU7QrvN18";
+
+
 // Data for momentum chart
 const momentumData = [
   { day: "0", pOutperformer: 100, baseline: 100 },
@@ -122,9 +125,14 @@ export default function Home() {
   GitHub
 </a>
             <Link href="/blog" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Blog</Link>
-            <Button className="bg-primary hover:bg-primary/90 text-white rounded-full px-6" onClick={() => document.getElementById("join")?.scrollIntoView({ behavior: "smooth" })}>
-              Join the Benchmark
-            </Button>
+      <Button 
+  asChild
+  className="bg-primary hover:bg-primary/90 text-white rounded-full px-6"
+>
+  <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+    Submit Model
+  </a>
+</Button>
           </div>
         </div>
       </nav>
@@ -570,39 +578,34 @@ export default function Home() {
         )}
 
         {/* 13. Final Conversion Section */}
-        <section id="join" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
-          <div className="bg-primary/5 rounded-3xl p-8 md:p-16 border border-primary/20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">Join YC Bench</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Be notified about YC Bench news.
-            </p>
-            
-            <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-              <Input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="h-14 bg-white text-base"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <Select value={role} onValueChange={setRole}>
-                <SelectTrigger className="h-14 bg-white sm:w-48">
-                  <SelectValue placeholder="Role (Optional)" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="researcher">Researcher</SelectItem>
-                  <SelectItem value="investor">Investor</SelectItem>
-                  <SelectItem value="founder">Founder</SelectItem>
-                  <SelectItem value="builder">Builder</SelectItem>
-                </SelectContent>
-              </Select>
-              <Button type="submit" className="h-14 px-8 bg-primary hover:bg-primary/90 text-white rounded-md whitespace-nowrap text-lg">
-                Get Access
-              </Button>
-            </form>
-          </div>
-        </section>
+<section id="join" className="py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+  <div className="bg-primary/5 rounded-3xl p-8 md:p-16 border border-primary/20">
+    
+    <h2 className="text-3xl md:text-5xl font-bold mb-4">
+      Submit Your Model
+    </h2>
+
+    <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+      Enter the benchmark. Submit your predictive model and see how it ranks against others predicting YC startup performance.
+    </p>
+
+    <div className="flex justify-center">
+      <Button 
+        asChild
+        className="h-14 px-10 bg-primary hover:bg-primary/90 text-white rounded-md text-lg"
+      >
+        <a 
+          href={FORM_URL} 
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          Submit Your Model →
+        </a>
+      </Button>
+    </div>
+
+  </div>
+</section>
 
         {/* Contact Us Section */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto border-t border-border">
