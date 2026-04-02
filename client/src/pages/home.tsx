@@ -152,37 +152,31 @@ export default function Home() {
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             YC Bench is a live benchmark evaluating forecasting models that predict which Y Combinator startups will outperform their batch peers over the next 90 days.
           </p>
+          
+<Card className="max-w-xl mx-auto border border-border shadow-sm p-6 mb-8 bg-white/50 backdrop-blur-sm text-center">
+  
+  <p className="text-sm text-muted-foreground mb-4">
+    Have a predictive model?
+  </p>
 
-          <Card className="max-w-xl mx-auto border border-border shadow-sm p-2 mb-8 bg-white/50 backdrop-blur-sm">
-            <form onSubmit={handleJoin} className="flex flex-col sm:flex-row gap-3">
-              <div className="flex-1">
-                <Input 
-                  type="email" 
-                  placeholder="Enter your email" 
-                  className="h-12 border-0 bg-transparent shadow-none focus-visible:ring-0 px-4 text-base"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
-              <div className="w-full sm:w-40 border-t sm:border-t-0 sm:border-l border-border pl-0 sm:pl-3 pt-3 sm:pt-0">
-                <Select value={role} onValueChange={setRole}>
-                  <SelectTrigger className="h-12 border-0 bg-transparent shadow-none focus:ring-0 focus:ring-offset-0">
-                    <SelectValue placeholder="I am a..." />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="researcher">Researcher</SelectItem>
-                    <SelectItem value="investor">Investor</SelectItem>
-                    <SelectItem value="founder">Founder</SelectItem>
-                    <SelectItem value="builder">Builder</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <Button type="submit" className="h-12 px-8 bg-primary hover:bg-primary/90 text-white rounded-md whitespace-nowrap">
-                Get Access
-              </Button>
-            </form>
-          </Card>
+  <h3 className="text-xl font-semibold mb-6">
+    Submit it to the YC Bench leaderboard
+  </h3>
+
+  <Button 
+    asChild
+    className="h-12 px-8 bg-primary hover:bg-primary/90 text-white rounded-md text-base"
+  >
+    <a 
+      href="https://forms.gle/oYh3teZ8xU7QrvN18" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Submit Your Model →
+    </a>
+  </Button>
+
+</Card>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-muted-foreground">
             <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Live evaluation</span>
@@ -326,10 +320,6 @@ export default function Home() {
                   ))}
                 </div>
               </Card>
-              
-              <Button variant="outline" className="w-full sm:w-auto gap-2">
-                <Share2 className="w-4 h-4" /> Share Radar
-              </Button>
             </div>
           </section>
         </div>
