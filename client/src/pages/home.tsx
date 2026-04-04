@@ -146,7 +146,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
             >
-              <span className="text-[#5865F2]"><DiscordIcon /></span> Discord
+              <DiscordIcon /> Discord
             </a>
             <a
               href="https://hal.science/hal-05573226"
@@ -199,7 +199,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 py-1"
             >
-              <span className="text-[#5865F2]"><DiscordIcon /></span> Discord
+              <DiscordIcon /> Discord
             </a>
             <a
               href="https://hal.science/hal-05573226"
