@@ -582,7 +582,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
                 <DiscordIcon className="w-5 h-5" />
-                Join Discord
+                Join Discord community
               </a>
             </div>
           </div>
