@@ -224,7 +224,7 @@ export default function Home() {
             <span className="text-primary">YC Outperformers</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
-            YC Bench is a live benchmark for models forecasting the top 10% of Y Combinator startups before Demo Day.
+            YC Bench is a live benchmark for models forecasting the top 10% of each Y Combinator batch before Demo Day.
           </p>
           <Card className="max-w-xl mx-auto border border-border shadow-sm p-6 mb-8 bg-white/50 backdrop-blur-sm text-center">
             <p className="text-sm text-muted-foreground mb-4">
