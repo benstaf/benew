@@ -131,7 +131,7 @@ export default function Home() {
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
-            
+            <a
               href="https://github.com/benstaf/ycbench"
               target="_blank"
               rel="noopener noreferrer"
@@ -139,7 +139,7 @@ export default function Home() {
             >
               <GithubIcon /> GitHub
             </a>
-            
+            <a
               href="https://discord.gg/ekrySuRBf4"
               target="_blank"
               rel="noopener noreferrer"
@@ -147,7 +147,7 @@ export default function Home() {
             >
               <DiscordIcon /> Discord
             </a>
-            
+            <a
               href="https://hal.science/hal-05573226"
               target="_blank"
               rel="noopener noreferrer"
@@ -181,7 +181,7 @@ export default function Home() {
         {menuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border px-4 py-4 flex flex-col gap-4">
             <a href="#leaderboard" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-1">Leaderboard</a>
-            
+            <a
               href="https://github.com/benstaf/ycbench"
               target="_blank"
               rel="noopener noreferrer"
@@ -189,7 +189,7 @@ export default function Home() {
             >
               <GithubIcon /> GitHub
             </a>
-            
+            <a
               href="https://discord.gg/ekrySuRBf4"
               target="_blank"
               rel="noopener noreferrer"
@@ -197,7 +197,7 @@ export default function Home() {
             >
               <DiscordIcon /> Discord
             </a>
-            
+            <a
               href="https://hal.science/hal-05573226"
               target="_blank"
               rel="noopener noreferrer"
@@ -557,7 +557,7 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              
+              <a
                 href={FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -566,7 +566,7 @@ export default function Home() {
                 <Rocket className="w-5 h-5" />
                 Submit a Model →
               </a>
-              
+              <a
                 href="https://github.com/benstaf/ycbench"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -575,7 +575,7 @@ export default function Home() {
                 <GithubIcon className="w-5 h-5" />
                 Contribute on GitHub
               </a>
-              
+              <a
                 href="https://discord.gg/ekrySuRBf4"
                 target="_blank"
                 rel="noopener noreferrer"
