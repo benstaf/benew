@@ -16,7 +16,6 @@ import {
   Mail,
   Calendar,
 } from "lucide-react";
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -94,6 +93,7 @@ export default function Home() {
   const [role, setRole] = useState("");
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
   const { data: recentPosts } = useQuery<PostMeta[]>({ queryKey: ["/api/posts"] });
 
   useEffect(() => {
@@ -127,12 +127,10 @@ export default function Home() {
             </div>
             <span className="font-semibold text-lg tracking-tight">Bench</span>
           </div>
-
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">How it Works</a>
             <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
-            <a
+            
               href="https://github.com/benstaf/ycbench"
               target="_blank"
               rel="noopener noreferrer"
@@ -140,7 +138,7 @@ export default function Home() {
             >
               <GithubIcon /> GitHub
             </a>
-            <a
+            
               href="https://discord.gg/ekrySuRBf4"
               target="_blank"
               rel="noopener noreferrer"
@@ -148,7 +146,7 @@ export default function Home() {
             >
               <DiscordIcon /> Discord
             </a>
-            <a
+            
               href="https://hal.science/hal-05573226"
               target="_blank"
               rel="noopener noreferrer"
@@ -161,7 +159,6 @@ export default function Home() {
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Submit Model</a>
             </Button>
           </div>
-
           {/* Mobile hamburger */}
           <button
             className="md:hidden p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
@@ -179,13 +176,11 @@ export default function Home() {
             )}
           </button>
         </div>
-
         {/* Mobile menu drawer */}
         {menuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-border px-4 py-4 flex flex-col gap-4">
-            <a href="#how-it-works" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-1">How it Works</a>
             <a href="#leaderboard" onClick={() => setMenuOpen(false)} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors py-1">Leaderboard</a>
-            <a
+            
               href="https://github.com/benstaf/ycbench"
               target="_blank"
               rel="noopener noreferrer"
@@ -193,7 +188,7 @@ export default function Home() {
             >
               <GithubIcon /> GitHub
             </a>
-            <a
+            
               href="https://discord.gg/ekrySuRBf4"
               target="_blank"
               rel="noopener noreferrer"
@@ -201,7 +196,7 @@ export default function Home() {
             >
               <DiscordIcon /> Discord
             </a>
-            <a
+            
               href="https://hal.science/hal-05573226"
               target="_blank"
               rel="noopener noreferrer"
@@ -223,16 +218,13 @@ export default function Home() {
           <div className="mb-8 flex justify-center">
             <BuiltOnYCBadge />
           </div>
-
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 max-w-4xl mx-auto leading-tight">
             Predict the Next <br/>
             <span className="text-primary">YC Outperformers</span>
           </h1>
-
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             YC Bench is a live benchmark evaluating forecasting models that predict which Y Combinator startups will outperform their batch peers over the next 90 days.
           </p>
-
           <Card className="max-w-xl mx-auto border border-border shadow-sm p-6 mb-8 bg-white/50 backdrop-blur-sm text-center">
             <p className="text-sm text-muted-foreground mb-4">
               Have a predictive model?
@@ -249,7 +241,6 @@ export default function Home() {
               </a>
             </Button>
           </Card>
-
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-medium text-muted-foreground">
             <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Live evaluation</span>
             <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-primary" /> Cohort-relative signals</span>
@@ -290,7 +281,6 @@ export default function Home() {
                 Can you beat the baseline?
               </p>
             </div>
-
             <Card className="border border-border/50 shadow-md overflow-hidden bg-white">
               <div className="overflow-x-auto">
                 <Table>
@@ -332,7 +322,6 @@ export default function Home() {
             <div className="max-w-xl ml-auto">
               <h2 className="text-3xl font-bold mb-2">Batch Outperformer Radar</h2>
               <p className="text-muted-foreground mb-8">Updated every evaluation cycle (90 days)</p>
-
               <Card className="border border-border shadow-sm p-6 mb-6">
                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
                   <h3 className="font-semibold text-lg flex items-center gap-2">
@@ -340,7 +329,6 @@ export default function Home() {
                   </h3>
                   <span className="text-sm font-medium bg-secondary px-2 py-1 rounded">W26 Batch</span>
                 </div>
-
                 <div className="space-y-4">
                   {[
                     { name: "Pocket", score: "+2.0σ", color: "text-primary", bg: "bg-primary/10" },
@@ -371,10 +359,8 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">A forward-looking approach to test predictive models.</p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
             <div className="hidden md:block absolute top-12 left-[16%] right-[16%] h-[2px] bg-secondary/80 -z-10"></div>
-
             {[
               {
                 step: "1",
@@ -451,7 +437,6 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-
             <div className="bg-secondary/50 p-8 rounded-2xl border border-border">
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-3">
                 <Search className="w-6 h-6 text-primary" /> Benchmark Protocol
@@ -503,7 +488,6 @@ export default function Home() {
         {/* 12. Roadmap */}
         <section className="py-24 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-bold mb-12 text-center">YC Bench Roadmap</h2>
-
           <div className="space-y-6 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
             {[
               { phase: "Phase 1", title: "Baseline Validation", active: false },
@@ -536,7 +520,6 @@ export default function Home() {
                 YC Bench is open. Join the community and help build the benchmark.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {[
                 {
@@ -572,21 +555,31 @@ export default function Home() {
               ))}
             </div>
 
+            {/* ← UPDATED: Submit Model button added as primary CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="https://github.com/benstaf/ycbench"
+              
+                href={FORM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
+                <Rocket className="w-5 h-5" />
+                Submit a Model →
+              </a>
+              
+                href="https://github.com/benstaf/ycbench"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-secondary border border-border text-foreground rounded-lg font-semibold text-base transition-colors shadow-sm"
+              >
                 <GithubIcon className="w-5 h-5" />
                 Contribute on GitHub
               </a>
-              <a
+              
                 href="https://discord.gg/ekrySuRBf4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/80 hover:bg-primary/70 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-secondary border border-border text-foreground rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
                 <DiscordIcon className="w-5 h-5" />
                 Join Discord
@@ -607,7 +600,6 @@ export default function Home() {
                 All posts <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {recentPosts.slice(0, 3).map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`}>
@@ -633,7 +625,6 @@ export default function Home() {
                 </Link>
               ))}
             </div>
-
             <div className="mt-8 text-center sm:hidden">
               <Link href="/blog" className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:underline">
                 View all posts <ArrowRight className="w-4 h-4" />
