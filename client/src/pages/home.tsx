@@ -555,36 +555,37 @@ export default function Home() {
                 </div>
               ))}
             </div>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
-              >
-                <Rocket className="w-5 h-5" />
-                Submit your Model →
-              </a>
-              <a
-                href="https://github.com/benstaf/ycbench"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-lg font-semibold text-base transition-colors shadow-sm"
-              >
-                <GithubIcon className="w-5 h-5" />
-                Contribute on GitHub
-              </a>
-              <a
-                href="https://discord.gg/ekrySuRBf4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-lg font-semibold text-base transition-colors shadow-sm"
-              >
-                <DiscordIcon className="w-5 h-5" />
-                Join Discord Community
-              </a>
-            </div>
+<div className="flex flex-col sm:flex-row gap-4 justify-center">
+  
+    href={FORM_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
+  >
+    <Rocket className="w-5 h-5" />
+    Submit your Model →
+  </a>
+  
+    href="https://github.com/benstaf/ycbench"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90"
+    style={{ background: "#FF8C3A" }}
+  >
+    <GithubIcon className="w-5 h-5" />
+    Contribute on GitHub
+  </a>
+  
+    href="https://discord.gg/ekrySuRBf4"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90"
+    style={{ background: "#FF8C3A" }}
+  >
+    <DiscordIcon className="w-5 h-5" />
+    Join Discord Community
+  </a>
+</div>
           </div>
         </section>
 
