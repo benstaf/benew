@@ -530,7 +530,7 @@ export default function Home() {
                 },
                 {
                   title: "Improve Evaluation Metrics",
-                  desc: "Propose better scoring rules, calibration methods, or asymmetric loss functions.",
+                  desc: "Propose better metrics, scoring rules or calibration methods.",
                   icon: <BarChart3 className="w-6 h-6 text-primary" />,
                 },
                 {
