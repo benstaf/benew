@@ -127,6 +127,7 @@ export default function Home() {
             </div>
             <span className="font-semibold text-lg tracking-tight">Bench</span>
           </div>
+          
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
             <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
