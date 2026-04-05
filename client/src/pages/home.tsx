@@ -556,7 +556,6 @@ export default function Home() {
               ))}
             </div>
 
-            {/* ← UPDATED: Submit Model button added as primary CTA */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               
                 href={FORM_URL}
