@@ -564,13 +564,13 @@ export default function Home() {
                 className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
                 <Rocket className="w-5 h-5" />
-                Submit a Model →
+                Submit your Model →
               </a>
               <a
                 href="https://github.com/benstaf/ycbench"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-secondary border border-border text-foreground rounded-lg font-semibold text-base transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
                 <GithubIcon className="w-5 h-5" />
                 Contribute on GitHub
@@ -579,7 +579,7 @@ export default function Home() {
                 href="https://discord.gg/ekrySuRBf4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-white hover:bg-secondary border border-border text-foreground rounded-lg font-semibold text-base transition-colors shadow-sm"
+                className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary/10 hover:bg-primary/20 border border-primary/20 text-primary rounded-lg font-semibold text-base transition-colors shadow-sm"
               >
                 <DiscordIcon className="w-5 h-5" />
                 Join Discord
