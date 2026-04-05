@@ -556,32 +556,15 @@ export default function Home() {
               ))}
             </div>
 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-  
-    href={FORM_URL}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm"
-  >
+  <a href={FORM_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary hover:bg-primary/90 text-white rounded-lg font-semibold text-base transition-colors shadow-sm">
     <Rocket className="w-5 h-5" />
     Submit your Model
   </a>
-  
-    href="https://github.com/benstaf/ycbench"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90"
-    style={{ background: "#FF8C3A" }}
-  >
+  <a href="https://github.com/benstaf/ycbench" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90" style={{ background: "#FF8C3A" }}>
     <GithubIcon className="w-5 h-5" />
     Contribute on GitHub
   </a>
-  
-    href="https://discord.gg/ekrySuRBf4"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90"
-    style={{ background: "#FF8C3A" }}
-  >
+  <a href="https://discord.gg/ekrySuRBf4" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-3 px-8 py-4 text-white rounded-lg font-semibold text-base transition-colors shadow-sm hover:opacity-90" style={{ background: "#FF8C3A" }}>
     <DiscordIcon className="w-5 h-5" />
     Join Discord Community
   </a>
