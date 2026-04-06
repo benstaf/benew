@@ -148,7 +148,7 @@ export default function Home() {
               <DiscordIcon /> Discord
             </a>
             <a
-              href="https://hal.science/hal-05573226"
+              href="https://arxiv.org/abs/2604.02378"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-1.5"
@@ -198,7 +198,7 @@ export default function Home() {
               <DiscordIcon /> Discord
             </a>
             <a
-              href="https://hal.science/hal-05573226"
+              href="https://arxiv.org/abs/2604.02378"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors flex items-center gap-2 py-1"
