@@ -266,7 +266,7 @@ export default function Home() {
           <div className="prose prose-lg mx-auto text-muted-foreground space-y-6">
             <p className="text-2xl text-foreground font-medium">Forecasting startup success normally takes years.<br/>YC Bench makes it measurable in months.</p>
             <p>
-              Because Y Combinator startups launch in synchronized batches, they form natural peer cohorts. This allows models to measure relative execution and short-term outperformance, instead of waiting for distant outcomes like unicorns or exits.
+              Y Combinator startups launch in synchronized batches, allowing models to measure relative execution and short-term outperformance, instead of waiting for distant outcomes like unicorns or exits.
             </p>
           </div>
         </section>
