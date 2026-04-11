@@ -30,7 +30,7 @@
 }
 
 :root {
-  --background: 39 77% 95%; /* #FDF5E6 */
+  --background: 60 29% 95%; /* #f5f5ed  old: 39 77% 95%; #FDF5E6 */
   --foreground: 0 0% 9%;
   
   --card: 0 0% 100%;
