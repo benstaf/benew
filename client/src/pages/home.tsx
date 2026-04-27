@@ -38,6 +38,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ReferenceLine } from "recharts";
+import { LEADERBOARD_DATA } from "./leaderboardData";
 
 interface PostMeta {
   slug: string;
@@ -317,40 +318,49 @@ export default function Home() {
           </div>
         </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-          {/* 4. Batch Outperformer Radar */}
-          <section className="py-24 px-4 sm:px-6 lg:px-12 bg-white border-r border-border">
-            <div className="max-w-xl ml-auto">
-              <h2 className="text-3xl font-bold mb-2">Batch Outperformer Radar</h2>
-              <p className="text-muted-foreground mb-8">Updated every evaluation cycle (90 days)</p>
-              <Card className="border border-border shadow-sm p-6 mb-6">
-                <div className="flex items-center justify-between mb-6 pb-4 border-b border-border">
-                  <h3 className="font-semibold text-lg flex items-center gap-2">
-                    <Target className="w-5 h-5 text-primary" /> Top Outperformers
-                  </h3>
-                  <span className="text-sm font-medium bg-secondary px-2 py-1 rounded">W26 Batch</span>
-                </div>
-                <div className="space-y-4">
-                  {[
-                    { name: "Pocket", score: "+2.0σ", color: "text-primary", bg: "bg-primary/10" },
-                    { name: "Mango Medical", score: "+1.2σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Didit", score: "+1.0σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Corvera", score: "+0.6σ", color: "text-foreground", bg: "bg-secondary" },
-                    { name: "Samora AI", score: "+0.5σ", color: "text-foreground", bg: "bg-secondary" },
-                  ].map((company, i) => (
-                    <div key={i} className="flex items-center justify-between group">
-                      <div className="flex items-center gap-3">
-                        <span className={`w-6 text-center font-mono text-sm ${i === 0 ? 'text-primary font-bold' : 'text-muted-foreground'}`}>{i + 1}</span>
-                        <span className={`font-medium ${i === 0 ? 'text-lg' : ''}`}>{company.name}</span>
-                      </div>
-                      <div className={`flex items-center gap-1 font-mono text-sm px-2 py-1 rounded ${company.bg} ${company.color}`}>
-                        <TrendingUp className="w-3 h-3" /> Velocity {company.score}
-                      </div>
-                    </div>
+    
+    {/* 4. Model Leaderboard Table */}
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-border">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold mb-2">Top 20 Startups — W26 Batch</h2>
+            <p className="text-muted-foreground mb-8">
+              Score = % of runs where startup was selected. Ranked by average across 10 LLMs.
+            </p>
+            <div className="overflow-x-auto rounded-xl border border-border shadow-md">
+              <table className="w-full text-sm border-collapse">
+                <thead>
+                  <tr className="bg-secondary/70 border-b border-border">
+                    <th className="sticky left-0 bg-secondary/70 z-10 py-4 px-3 text-left font-semibold w-8">#</th>
+                    <th className="sticky left-8 bg-secondary/70 z-10 py-4 px-4 text-left font-semibold min-w-[150px] border-r border-border">Startup</th>
+                    <th className="py-4 px-4 text-center font-semibold text-primary whitespace-nowrap border-r border-border">LLM Average</th>
+                    {["Claude","GPT","Gemini","Grok","GLM","Kimi","DeepSeek","Qwen","MiniMax","Mimo"].map(m => (
+                      <th key={m} className="py-4 px-3 text-center font-semibold text-muted-foreground whitespace-nowrap">{m}</th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {LEADERBOARD_DATA.map((row, i) => (
+                    <tr key={row.name as string} className={`border-b border-border/50 hover:bg-secondary/20 transition-colors ${i % 2 === 0 ? 'bg-white' : 'bg-secondary/10'}`}>
+                      <td className="sticky left-0 py-3 px-3 font-mono text-xs text-muted-foreground bg-inherit z-10">{i + 1}</td>
+                      <td className="sticky left-8 py-3 px-4 font-medium bg-inherit z-10 border-r border-border whitespace-nowrap">{row.name as string}</td>
+                      <td className="py-3 px-4 text-center font-mono font-bold text-primary border-r border-border">
+                        {row["LLM Average"] as number}
+                      </td>
+                      {["Claude","GPT","Gemini","Grok","GLM","Kimi","DeepSeek","Qwen","MiniMax","Mimo"].map(m => {
+                        const v = row[m] as number ?? 0;
+                        const cls = v === 0 ? 'text-muted-foreground/30' : v >= 80 ? 'text-green-700 font-semibold' : v >= 40 ? 'text-foreground' : 'text-muted-foreground';
+                        return (
+                          <td key={m} className={`py-3 px-3 text-center font-mono text-xs ${cls}`}>
+                            {v > 0 ? v : '—'}
+                          </td>
+                        );
+                      })}
+                    </tr>
                   ))}
-                </div>
-              </Card>
+                </tbody>
+              </table>
             </div>
+          </div>
           </section>
         </div>
 
