@@ -344,7 +344,7 @@ export default function Home() {
                       <td className="sticky left-0 py-3 px-3 font-mono text-xs text-muted-foreground bg-inherit z-10">{i + 1}</td>
                       <td className="sticky left-8 py-3 px-4 font-medium bg-inherit z-10 border-r border-border whitespace-nowrap">{row.name as string}</td>
                       <td className="py-3 px-4 text-center font-mono font-bold text-primary border-r border-border">
-                        {row["Average"] as number}
+                        {row["LLM Average"] as number}
                       </td>
                       {["Claude","GPT","Gemini","Grok","GLM","Kimi","DeepSeek","Qwen","MiniMax","Mimo"].map(m => {
                         const v = row[m] as number ?? 0;
