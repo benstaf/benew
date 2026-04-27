@@ -63,15 +63,30 @@ async function buildAll() {
 
   console.log("copying content/posts to dist...");
   const srcDir = path.resolve("content/posts");
+
+  // Existing destination (for Vercel / backend use)
   const destDir = path.resolve("dist/content/posts");
+
+  // New destination (for Netlify static hosting)
+  const publicDestDir = path.resolve("dist/public/content/posts");
+
   await mkdir(destDir, { recursive: true });
+  await mkdir(publicDestDir, { recursive: true });
+
   const files = await readdir(srcDir);
+
+  const markdownFiles = files.filter((f) => f.endsWith(".md"));
+
   await Promise.all(
-    files
-      .filter((f) => f.endsWith(".md"))
-      .map((f) => copyFile(path.join(srcDir, f), path.join(destDir, f)))
+    markdownFiles.flatMap((f) => [
+      copyFile(path.join(srcDir, f), path.join(destDir, f)),
+      copyFile(path.join(srcDir, f), path.join(publicDestDir, f)),
+    ])
   );
-  console.log(`copied ${files.length} post(s) to dist/content/posts`);
+
+  console.log(
+    `copied ${markdownFiles.length} post(s) to dist/content/posts and dist/public/content/posts`
+  );
 }
 
 buildAll().catch((err) => {
