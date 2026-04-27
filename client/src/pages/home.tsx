@@ -362,7 +362,7 @@ export default function Home() {
             </div>
           </div>
           </section>
-        </div>
+  
 
         {/* 6. How It Works */}
         <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
