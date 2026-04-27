@@ -63,15 +63,15 @@ const FORM_URL = "https://forms.gle/oYh3teZ8xU7QrvN18";
 
     const MODEL_META: Record<string, { icon: string; label: string }> = {
   Claude: {
-    icon: "/icons/claude.svg",
+    icon: "/claude.svg",
     label: "Sonnet 4.6",
   },
   GPT: {
-    icon: "/icons/gpt.svg",
+    icon: "/gpt.svg",
     label: "5.3",
   },
   Gemini: {
-    icon: "/icons/gemini.svg",
+    icon: "/gemini.svg",
     label: "3.1 Pro",
   },
   Grok: {
