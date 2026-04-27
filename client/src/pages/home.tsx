@@ -68,7 +68,7 @@ const FORM_URL = "https://forms.gle/oYh3teZ8xU7QrvN18";
   },
   GPT: {
     icon: "/icons/gpt.svg",
-    label: "GPT-5.3",
+    label: "5.3",
   },
   Gemini: {
     icon: "/icons/gemini.svg",
@@ -92,7 +92,7 @@ const FORM_URL = "https://forms.gle/oYh3teZ8xU7QrvN18";
   },
   Qwen: {
     icon: "/icons/qwen.svg",
-    label: "3.6+",
+    label: "3.6 Plus",
   },
   MiniMax: {
     icon: "/icons/minimax.svg",
