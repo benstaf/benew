@@ -131,7 +131,7 @@ export default function Home() {
           
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
-            <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Leaderboard</a>
+            <a href="#leaderboard" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">Models Leaderboard</a>
             <a
               href="https://github.com/benstaf/ycbench"
               target="_blank"
@@ -222,7 +222,7 @@ export default function Home() {
           </div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-6 max-w-4xl mx-auto leading-tight">
             Predict the Next <br/>
-            <span className="text-primary">YC Outperformers</span>
+            <span className="text-primary">Y Combinator Outperformers</span>
           </h1>
           <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto leading-relaxed">
             YC Bench is a live benchmark to forecast the top 10% Y Combinator startups at Demo Day.
@@ -277,10 +277,10 @@ export default function Home() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Live Benchmark Leaderboard
+                Models Leaderboard
               </h2>
               <p className="text-muted-foreground">
-                Can you beat the baseline?
+                Based on YC W26 batch
               </p>
             </div>
             <Card className="border border-border/50 shadow-md overflow-hidden bg-white">
@@ -322,9 +322,9 @@ export default function Home() {
     {/* 4. Model Leaderboard Table */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-border">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold mb-2">Top 20 Startups — W26 Batch</h2>
+            <h2 className="text-3xl font-bold mb-2">YC Startups Leaderboard</h2>
             <p className="text-muted-foreground mb-8">
-              Score = % of runs where startup was selected. Ranked by average across 10 LLMs.
+              P26 Batch - 0-100 scale
             </p>
             <div className="overflow-x-auto rounded-xl border border-border shadow-md">
               <table className="w-full text-sm border-collapse">
@@ -344,7 +344,7 @@ export default function Home() {
                       <td className="sticky left-0 py-3 px-3 font-mono text-xs text-muted-foreground bg-inherit z-10">{i + 1}</td>
                       <td className="sticky left-8 py-3 px-4 font-medium bg-inherit z-10 border-r border-border whitespace-nowrap">{row.name as string}</td>
                       <td className="py-3 px-4 text-center font-mono font-bold text-primary border-r border-border">
-                        {row["LLM Average"] as number}
+                        {row["Average"] as number}
                       </td>
                       {["Claude","GPT","Gemini","Grok","GLM","Kimi","DeepSeek","Qwen","MiniMax","Mimo"].map(m => {
                         const v = row[m] as number ?? 0;
