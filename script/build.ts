@@ -1,7 +1,16 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
-import { rm, readFile, mkdir, copyFile, readdir } from "fs/promises";
+import {
+  rm,
+  readFile,
+  mkdir,
+  copyFile,
+  readdir,
+  writeFile,
+} from "fs/promises";
+import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 
 // server deps to bundle to reduce openat(2) syscalls
 // which helps cold start times
@@ -33,6 +42,11 @@ const allowlist = [
   "zod-validation-error",
 ];
 
+function estimateReadTime(text: string): number {
+  const words = text.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
 async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
@@ -61,32 +75,67 @@ async function buildAll() {
     logLevel: "info",
   });
 
-  console.log("copying content/posts to dist...");
+  console.log("processing blog posts...");
   const srcDir = path.resolve("content/posts");
-
-  // Existing destination (for Vercel / backend use)
   const destDir = path.resolve("dist/content/posts");
-
-  // New destination (for Netlify static hosting)
   const publicDestDir = path.resolve("dist/public/content/posts");
 
   await mkdir(destDir, { recursive: true });
   await mkdir(publicDestDir, { recursive: true });
 
-  const files = await readdir(srcDir);
+  const files = (await readdir(srcDir)).filter((f) => f.endsWith(".md"));
 
-  const markdownFiles = files.filter((f) => f.endsWith(".md"));
+  const postsMeta: any[] = [];
 
-  await Promise.all(
-    markdownFiles.flatMap((f) => [
-      copyFile(path.join(srcDir, f), path.join(destDir, f)),
-      copyFile(path.join(srcDir, f), path.join(publicDestDir, f)),
-    ])
+  for (const file of files) {
+    const fullPath = path.join(srcDir, file);
+    const raw = fs.readFileSync(fullPath, "utf-8");
+    const { data, content } = matter(raw);
+
+    const slug = file.replace(/\.md$/, "");
+    const readTime = estimateReadTime(content);
+
+    const post = {
+      slug,
+      title: data.title,
+      description: data.description || "",
+      date: data.date,
+      author: data.author || "YC Bench Team",
+      readTime,
+      content,
+    };
+
+    postsMeta.push({
+      slug,
+      title: post.title,
+      description: post.description,
+      date: post.date,
+      author: post.author,
+      readTime: post.readTime,
+    });
+
+    // keep original markdown copies
+    await copyFile(fullPath, path.join(destDir, file));
+    await copyFile(fullPath, path.join(publicDestDir, file));
+
+    // generate static JSON per post
+    await writeFile(
+      path.join(publicDestDir, `${slug}.json`),
+      JSON.stringify(post, null, 2)
+    );
+  }
+
+  // generate posts index
+  postsMeta.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
-  console.log(
-    `copied ${markdownFiles.length} post(s) to dist/content/posts and dist/public/content/posts`
+  await writeFile(
+    path.join(publicDestDir, "index.json"),
+    JSON.stringify(postsMeta, null, 2)
   );
+
+  console.log(`generated ${files.length} static post(s)`);
 }
 
 buildAll().catch((err) => {
