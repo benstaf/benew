@@ -3,7 +3,7 @@ export type LeaderboardRow = Record<string, number | string>;
 
 export const LEADERBOARD_DATA: LeaderboardRow[] = [
   {
-    "name": "Hub.Xyz",
+    "name": "Hub.xyz",
     "LLM Average": 78,
     "Claude": 80,
     "GPT": 100,
