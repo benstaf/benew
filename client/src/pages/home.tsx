@@ -61,45 +61,45 @@ const FORM_URL = "https://forms.gle/oYh3teZ8xU7QrvN18";
 
 
 
-    const MODEL_META: Record<string, { icon: string; label: string }> = {
+const MODEL_META: Record<string, { icon: string; label: string }> = {
   Claude: {
-    icon: "/claude.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/b/b0/Claude_AI_symbol.svg",
     label: "Sonnet 4.6",
   },
   GPT: {
-    icon: "/gpt.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/64px-ChatGPT_logo.svg.png",
     label: "5.3",
   },
   Gemini: {
-    icon: "/gemini.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/64px-Google_Gemini_logo.svg.png",
     label: "3.1 Pro",
   },
   Grok: {
-    icon: "/icons/grok.svg",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Grok_logo_%28new%29.svg/64px-Grok_logo_%28new%29.svg.png",
     label: "4.20",
   },
   GLM: {
-    icon: "/icons/glm.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/zhipu-color.png",
     label: "5.1",
   },
   Kimi: {
-    icon: "/icons/kimi.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/moonshot-color.png",
     label: "2.6 Thinking",
   },
   DeepSeek: {
-    icon: "/icons/deepseek.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/deepseek-color.png",
     label: "V4",
   },
   Qwen: {
-    icon: "/icons/qwen.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/qwen-color.png",
     label: "3.6 Plus",
   },
   MiniMax: {
-    icon: "/icons/minimax.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/minimax-color.png",
     label: "M-2.7",
   },
   Mimo: {
-    icon: "/icons/mimo.svg",
+    icon: "https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/mimo-color.png",
     label: "v2.5 Pro",
   },
 };
