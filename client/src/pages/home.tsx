@@ -67,15 +67,15 @@ const MODEL_META: Record<string, { icon: string; label: string }> = {
     label: "Sonnet 4.6",
   },
   GPT: {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/64px-ChatGPT_logo.svg.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/e/ef/ChatGPT-Logo.svg",
     label: "5.3",
   },
   Gemini: {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/64px-Google_Gemini_logo.svg.png",
+    icon: "https://upload.wikimedia.org/wikipedia/commons/8/8f/Google-gemini-icon.svg",
     label: "3.1 Pro",
   },
   Grok: {
-    icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Grok_logo_%28new%29.svg/64px-Grok_logo_%28new%29.svg.png",
+    icon: "https://www.nan.xyz/wp-content/uploads/grok-seeklogo-.svg",
     label: "4.20",
   },
   GLM: {
